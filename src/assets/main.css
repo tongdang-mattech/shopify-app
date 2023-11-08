@@ -1,0 +1,312 @@
+@import 'mapbox-gl/dist/mapbox-gl.css';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ibarra+Real+Nova:ital,wght@0,400;0,600;1,600&family=Prompt:ital,wght@0,200;0,400;0,500;0,600;1,300;1,700&family=Raleway:wght@200;300;500;600;700&family=Roboto:wght@300;400&family=Trispace:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/quickpen');
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+:root {
+  --primary-color: #448aff;
+  --header-height: 80px;
+  --footer-height: 75px;
+}
+
+.fw {
+  width: 100%;
+}
+
+.fh {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gilroy-Regular', sans-serif;
+}
+html {
+  overflow-y: overlay;
+  height: 100vh;
+  transition: all 0.5s;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+input {
+  outline: none;
+  border: none;
+  padding: 0 8px;
+}
+.v-dialog > .v-overlay__content {
+  align-items: center !important;
+}
+.v-slider.v-input--vertical .v-input__control {
+  min-height: 238px !important;
+}
+.img {
+  border: 2px solid #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+@media (max-width: 750px) {
+  body {
+    font-size: 80%;
+    position: relative;
+  }
+}
+
+.color-light {
+  color: #838290;
+}
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+.hidden-map {
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  position: fixed;
+}
+.planetarium .cls-1 {
+  fill: none;
+  stroke: #000;
+  stroke-miterlimit: 10;
+  stroke-width: 30px;
+}
+.deco .cls-1 {
+  fill: none;
+  stroke: #000;
+  stroke-miterlimit: 9.1;
+  stroke-width: 18.2px;
+}
+
+/* svg */
+.landscape .compass,
+.landscape .rings,
+.landscape .planetarium,
+.landscape .doodle-hearts,
+.landscape .orbital,
+.landscape .sparkle,
+.landscape .focus,
+.landscape .halo,
+.landscape .frontier {
+  width: 56% !important;
+}
+
+.landscape2 .programmaticLayoutMask {
+  width: 58% !important;
+}
+.square .programmaticLayoutMask {
+  width: 80% !important;
+}
+
+.pad .navy,
+.pad .nautical,
+.pad .noir,
+.pad .newspaper,
+.pad .framed {
+  padding: 50px;
+}
+.pad .nautilus {
+  padding: 30px;
+}
+.pad .instant {
+  padding: 30px;
+}
+
+/* frame layout */
+.landscape2 .framed {
+  padding: 100px !important;
+}
+.landscape2 .framed .programmaticLayoutMask {
+  width: 56% !important;
+}
+.landscape1 .framed .programmaticLayoutMask {
+  width: 56% !important;
+}
+
+.square .framed .programmaticLayoutMask {
+  width: 85% !important;
+}
+
+.square .framed {
+  padding: 65px !important;
+}
+
+.framed {
+  background-color: rgb(255, 250, 247);
+}
+.framed svg {
+  stroke: rgb(208, 124, 101) !important;
+  fill: rgb(208, 124, 101) !important;
+}
+.framed .cls-1 {
+  stroke: rgb(208, 124, 101) !important;
+}
+
+/*  gaia layout */
+.landscape2 .gaia {
+  padding: 20px !important;
+}
+.landscape2 .gaia .programmaticLayoutMask {
+  width: 56% !important;
+}
+.landscape1 .gaia .programmaticLayoutMask {
+  width: 56.5% !important;
+}
+.square .gaia {
+  padding: 30px !important;
+}
+.square .gaia .programmaticLayoutMask {
+  width: 84% !important;
+}
+
+/* Instant */
+
+.landscape2 .instant .programmaticLayoutMask {
+  width: 50% !important;
+}
+.landscape1 .instant .programmaticLayoutMask {
+  width: 56% !important;
+}
+.square .instant .programmaticLayoutMask {
+  width: 82% !important;
+}
+.instant {
+  background-color: rgb(178, 203, 191);
+}
+
+.instant svg {
+  stroke: rgb(156, 88, 49) !important;
+  fill: rgb(156, 88, 49) !important;
+}
+.instant .cls-1 {
+  stroke: rgb(156, 88, 49) !important;
+}
+
+/* News paper */
+
+.landscape2 .newspaper .programmaticLayoutMask {
+  width: 52% !important;
+}
+.landscape1 .newspaper .programmaticLayoutMask {
+  width: 56% !important;
+}
+.square .newspaper .programmaticLayoutMask {
+  width: 85% !important;
+}
+
+.newspaper {
+  background-color: rgb(244, 199, 25);
+}
+
+.newspaper svg {
+  stroke: rgb(58, 58, 58) !important;
+  fill: rgb(58, 58, 58) !important;
+}
+.newspaper .cls-1 {
+  stroke: rgb(58, 58, 58) !important;
+}
+/* noir */
+
+.landscape2 .noir .programmaticLayoutMask {
+  width: 56% !important;
+}
+.landscape1 .noir .programmaticLayoutMask {
+  width: 56% !important;
+}
+.square .noir .programmaticLayoutMask {
+  width: 86% !important;
+}
+
+/* navy */
+
+.landscape2 .navy .programmaticLayoutMask {
+  width: 49% !important;
+}
+.landscape1 .navy .programmaticLayoutMask {
+  width: 56% !important;
+}
+.square .navy .programmaticLayoutMask {
+  width: 81% !important;
+}
+.navy {
+  background-color: rgb(255, 244, 223);
+}
+.navy svg {
+  stroke: rgb(85, 77, 47) !important;
+  fill: rgb(85, 77, 47) !important;
+}
+.navy .cls-1 {
+  stroke: rgb(85, 77, 47) !important;
+}
+.navy-block {
+  background-color: rgb(255, 244, 223);
+  padding: 5%;
+}
+.square .navy-block {
+  padding: 8% !important;
+}
+.landscape1 .wrapper-mask {
+  bottom: -13% !important;
+}
+.landscape2 .wrapper-mask {
+  bottom: -17% !important;
+}
+.square .wrapper-mask {
+  bottom: -14% !important;
+}
+.wrapper-mask {
+  bottom: -6% !important;
+}
+/* nautilus */
+
+.landscape2 .nautilus .programmaticLayoutMask {
+  width: 44% !important;
+}
+.landscape1 .nautilus .programmaticLayoutMask {
+  width: 53% !important;
+}
+.square .nautilus .programmaticLayoutMask {
+  width: 83% !important;
+}
+.nautilus {
+  background-color: rgb(241, 241, 241);
+}
+.text-container.nautilus-text {
+  background: rgb(241, 241, 241) !important;
+}
+.nautilus svg {
+  stroke: rgb(123, 123, 123) !important;
+  fill: rgb(123, 123, 123) !important;
+}
+.nautilus .cls-1 {
+  stroke: rgb(123, 123, 123) !important;
+}
+
+/* nautical */
+
+.landscape2 .nautical .programmaticLayoutMask {
+  width: 54% !important;
+}
+.landscape1 .nautical .programmaticLayoutMask {
+  width: 56% !important;
+}
+.square .nautical .programmaticLayoutMask {
+  width: 86% !important;
+}
+.landscape2 .nautical {
+  margin-bottom: 50px;
+}
+.nautical {
+  background-color: rgb(110, 144, 202);
+}
+.nautical svg {
+  stroke: rgb(241, 241, 241) !important;
+  fill: rgb(241, 241, 241) !important;
+}
+.nautical .cls-1 {
+  stroke: rgb(241, 241, 241) !important;
+}
